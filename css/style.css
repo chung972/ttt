@@ -1,0 +1,32 @@
+html, body {
+    height: 100 vh;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box; /*border, no matter how think will be included in (something? check docu)*/
+    font-family: helvetica; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+td {
+    height: 200px;
+    width: 200px;
+    border: 3px solid black;
+}
+
+td div {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 auto;
+    pointer-events: none;
+    /* setting pointer-events to none means that all clicks will refer to the PARENT, which
+    would be the td element (which happens to hold the id we want to extract)*/
+}
